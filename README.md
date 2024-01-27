@@ -1,1 +1,14 @@
 # Espi's PHP Login Boilerplate
+
+## .env variables in use
+```
+DB_HOST=
+DB_PORT=
+DB_NAME=
+DB_USERNAME=    
+DB_PASSWORD=
+DB_READ_USER=
+DB_READ_PASSWORD=
+DB_WRITE_USER=
+DB_WRITE_PASSWORD=
+```
