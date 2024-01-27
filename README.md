@@ -1,5 +1,5 @@
 # Espi's PHP Login Boilerplate
-
+Simple PHP registration/Login boilerplate in docker containers
 ## .env variables in use
 ```
 DB_NAME="webapp"
