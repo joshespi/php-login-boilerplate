@@ -4,7 +4,7 @@ session_start();
 
 include_once(__DIR__ . "/includes/dbConnect.php");
 
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['username']) && isset($_POST['password'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -44,7 +44,7 @@ include_once(__DIR__ . "/includes/header.php");
     <label for="password">Password:</label><br>
     <input type="password" id="password" name="password">
     <input type="submit" value="Submit">
-</form> 
+</form>
 
 <a href="/register.php">Register</a>
 <?php

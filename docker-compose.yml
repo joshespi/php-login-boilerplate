@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   php_app:
     build:
@@ -13,7 +13,7 @@ services:
       - app_db
     networks:
       - app_network
-  
+
   app_db:
     image: mariadb:11.2
     volumes:
@@ -28,7 +28,7 @@ services:
       - "3310:3306"
     networks:
       - app_network
-  
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
