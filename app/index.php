@@ -1,5 +1,6 @@
 <?php
 $pageName = "Logins";
+session_start();
 include_once(__DIR__ . "/includes/header.php");
 ?>
 <h2>Login Form</h2>
