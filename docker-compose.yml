@@ -11,7 +11,9 @@ services:
       - "8080:80"
     depends_on:
       - app_db
-
+    networks:
+      - app_network
+  
   app_db:
     image: mariadb:11.2
     volumes:
@@ -23,7 +25,8 @@ services:
       MARIADB_PASSWORD: ${DB_PASSWORD}
     ports:
       - "3310:3306"
-  
+    networks:
+      - app_network
   
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -33,3 +36,8 @@ services:
       - "8085:80"
     depends_on:
       - app_db
+    networks:
+      - app_network
+
+networks:
+  app_network:
