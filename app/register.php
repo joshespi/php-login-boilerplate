@@ -1,6 +1,7 @@
 
 <?php
 $pageName = "Register";
+
 include_once(__DIR__ . "/includes/dbConnect.php");
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -18,6 +19,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
 }
+
+
+
+
+
 include_once(__DIR__ . "/includes/header.php");
 ?>
 <h2>Registration Form</h2>
