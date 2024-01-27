@@ -1,6 +1,7 @@
 
 <?php
 $pageName = "Register";
+include_once(__DIR__ . "/includes/dbConnect.php");
 include_once(__DIR__ . "/includes/header.php");
 ?>
 <h2>Registration Form</h2>
