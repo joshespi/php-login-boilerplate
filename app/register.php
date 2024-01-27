@@ -30,6 +30,4 @@ include_once(__DIR__ . "/includes/header.php");
     <input type="submit" value="Submit">
 </form> 
 
-<?php
-include_once(__DIR__ . "/includes/footer.php");
-?>
+<?php include_once(__DIR__ . "/includes/footer.php"); ?>
