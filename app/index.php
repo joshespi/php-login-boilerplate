@@ -1,4 +1,5 @@
 <?php
+$pageName = "Home";
 include_once(__DIR__ . "/includes/header.php");
 ?>
 <a href="/register.php">Register</a>
