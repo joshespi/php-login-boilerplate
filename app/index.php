@@ -3,6 +3,7 @@ $pageName = "Logins";
 session_start();
 
 include_once(__DIR__ . "/includes/dbConnect.php");
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['username']) && isset($_POST['password'])) {
         $username = $_POST['username'];
@@ -34,6 +35,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 include_once(__DIR__ . "/includes/header.php");
 ?>
+
 <h2>Login Form</h2>
 
 <form action="index.php" method="post">
@@ -43,6 +45,7 @@ include_once(__DIR__ . "/includes/header.php");
     <input type="password" id="password" name="password">
     <input type="submit" value="Submit">
 </form> 
+
 <a href="/register.php">Register</a>
 <?php
 include_once(__DIR__ . "/includes/footer.php");
