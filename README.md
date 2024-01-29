@@ -26,3 +26,4 @@ DB_HOST="app_db"
 ```
 ## Resources
 - [PureCSS](https://purecss.io/)
+- [PHPMailer](https://github.com/PHPMailer/PHPMailer)
