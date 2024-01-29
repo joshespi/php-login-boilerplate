@@ -34,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 include_once(__DIR__ . "/includes/header.php");
+
+//page content starts here
 ?>
 
 <h2>Login Form</h2>
@@ -48,5 +50,6 @@ include_once(__DIR__ . "/includes/header.php");
 
 <a href="/register.php">Register</a>
 <?php
+//page content ends here
 include_once(__DIR__ . "/includes/footer.php");
 ?>

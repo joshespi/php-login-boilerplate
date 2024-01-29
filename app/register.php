@@ -23,6 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 include_once(__DIR__ . "/includes/header.php");
+
+//page content starts here
 ?>
 <h2>Registration Form</h2>
 
@@ -34,4 +36,7 @@ include_once(__DIR__ . "/includes/header.php");
     <input type="submit" value="Submit">
 </form>
 
-<?php include_once(__DIR__ . "/includes/footer.php"); ?>
+<?php
+//page content ends here
+include_once(__DIR__ . "/includes/footer.php");
+?>
