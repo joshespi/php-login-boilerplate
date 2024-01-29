@@ -1,6 +1,8 @@
 # Espi's PHP Login Boilerplate
 Simple PHP registration/Login boilerplate in docker containers
-## .env variables in use
+
+## Requirements
+- Docker Engine
 ```
 DB_NAME="webapp"
 DB_USERNAME="webadmin"   
