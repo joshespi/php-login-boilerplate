@@ -1,5 +1,5 @@
 <?php
-
+$pageName = "Dashboard";
 session_start();
 
 if (!isset($_SESSION['username'])) {
