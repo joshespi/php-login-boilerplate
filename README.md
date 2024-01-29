@@ -9,7 +9,7 @@ Clone Repo ```https://github.com/joshespi/php-login-boilerplate.git```
 Change into directory php-login-boilerplate
 
 ### Build
-````docker compose build``
+```docker compose build```
 ### Start
 ```docker compose up -d```
 
