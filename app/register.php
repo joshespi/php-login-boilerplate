@@ -11,7 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $result = mysqli_query($db, $sql);
         if ($result) {
-            echo "User created successfully.";
+            session_start();
+            $_SESSION['msg'] = "User created successfully.";
+            header('Location: index.php');
+            exit;
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($db);
         }

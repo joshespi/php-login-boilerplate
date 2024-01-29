@@ -35,7 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
+// check for alert message and sets it and then unsets from session
+$alert = "";
+if (isset($_SESSION['msg'])) {
 
+    $alert = $_SESSION['msg'];
+    unset($_SESSION['msg']);
+}
 
 
 
@@ -45,8 +51,7 @@ include_once(__DIR__ . "/includes/header.php");
 ?>
 
 <h2>Login Form</h2>
-
-
+<?= $alert ?>
 <form class="pure-form" action="index.php" method="post">
 
     <fieldset>
