@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 session_regenerate_id();
                 // Here you can set the user data in the session to keep the user logged in
                 $_SESSION['username'] = $username;
+
                 // Update the last_login field with the current timestamp
                 $update_stmt = $db->prepare("UPDATE users SET last_login = CURRENT_TIMESTAMP WHERE username = ?");
                 $update_stmt->bind_param("s", $username);
