@@ -4,7 +4,7 @@ Simple PHP registration/Login boilerplate in docker containers
 ## Requirements
 - Docker Engine
 ## Installation
-Clone Repo ```https://github.com/joshespi/php-login-boilerplate.git```
+Clone Repo ```git clone https://github.com/joshespi/php-login-boilerplate.git```
 
 Change into directory php-login-boilerplate
 
