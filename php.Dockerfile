@@ -15,8 +15,8 @@ RUN echo "Protocols h2 http/1.1" >> /etc/apache2/apache2.conf
 # Set ServerName
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-# Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+# Get latest Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Restart Apache to apply the changes
 RUN service apache2 restart
@@ -24,5 +24,9 @@ RUN service apache2 restart
 # Change the working directory
 WORKDIR /var/www/html
 
-# Install dependencies
-RUN composer install
+# Copy in Composer config
+COPY /app/composer.json /var/www/html/
+COPY /app/composer.lock /var/www/html/
+
+# Install Composer packages
+RUN composer install --no-interaction --no-ansi --no-scripts --no-progress --prefer-dist
