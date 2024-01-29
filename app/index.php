@@ -14,19 +14,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $login_stmt->execute();
         $login_results = $login_stmt->get_result();
 
-        if (mysqli_num_rows($result) > 0) {
-            $user = mysqli_fetch_assoc($result);
-            if (password_verify($password, $user['password'])) {
-                // echo "Login successful.";
+        if (mysqli_num_rows($login_results) > 0) {
+            $user = mysqli_fetch_assoc($login_results);
+
+            if (!password_verify($password, $user['password']) || $user['username'] !== $username) {
+                echo "Invalid username or password.";
+            } else {
+                session_regenerate_id();
                 // Here you can set the user data in the session to keep the user logged in
                 $_SESSION['username'] = $username;
                 // Then redirect to the desired page
                 header('Location: dashboard.php');
-            } else {
-                echo "Invalid password.";
             }
-        } else {
-            echo "Invalid username.";
         }
     }
 }
