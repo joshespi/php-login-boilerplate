@@ -31,12 +31,12 @@ include_once(__DIR__ . "/includes/header.php");
 ?>
 <h2>Registration Form</h2>
 
-<form action="register.php" method="post">
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username"><br>
-    <label for="password">Password:</label><br>
+<form action="register.php" method="post" class="pure-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <label for="password">Password:</label>
     <input type="password" id="password" name="password">
-    <input type="submit" value="Submit">
+    <button type="submit" class="pure-button pure-button-primary">Register</button>
 </form>
 
 <?php
