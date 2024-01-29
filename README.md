@@ -8,3 +8,5 @@ DB_PASSWORD=""
 DB_ROOT_PASSWORD=""
 DB_HOST="app_db"
 ```
+## Resources
+- [PureCSS](https://purecss.io/)
