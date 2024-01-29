@@ -9,8 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $username = mysqli_real_escape_string($db, $_POST['username']);
         $password = $_POST['password'];
 
-        $sql = "SELECT * FROM users WHERE username = '$username'";
-        $result = mysqli_query($db, $sql);
+        $login_stmt = $db->prepare("SELECT * FROM users WHERE username = ?");
+        $login_stmt->bind_param("s", $username);
+        $login_stmt->execute();
+        $login_results = $login_stmt->get_result();
 
         if (mysqli_num_rows($result) > 0) {
             $user = mysqli_fetch_assoc($result);
