@@ -6,7 +6,7 @@ include_once(__DIR__ . "/includes/dbConnect.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['username']) && isset($_POST['password'])) {
-        $username = $_POST['username'];
+        $username = mysqli_real_escape_string($db, $_POST['username']);
         $password = $_POST['password'];
 
         $sql = "SELECT * FROM users WHERE username = '$username'";
