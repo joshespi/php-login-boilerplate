@@ -42,11 +42,10 @@ include_once(__DIR__ . "/includes/header.php");
 <h2>Login Form</h2>
 
 
-
 <form class="pure-form" action="index.php" method="post">
 
     <fieldset>
-        <label for="username">Username:</label><br>
+        <label for="username">Username:</label>
         <input type="text" id="username" name="username" placeholder="Username">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" placeholder="Password">
