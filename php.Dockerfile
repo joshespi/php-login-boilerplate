@@ -28,5 +28,6 @@ WORKDIR /var/www/html
 COPY /app/composer.json /var/www/html/
 COPY /app/composer.lock /var/www/html/
 
-# Install Composer packages
-RUN composer install --no-interaction --no-ansi --no-scripts --no-progress --prefer-dist
+
+# CMD cron && docker-php-entrypoint apache2-foreground
+CMD composer install --no-interaction --no-ansi --no-scripts --no-progress --prefer-dist && docker-php-entrypoint apache2-foreground
